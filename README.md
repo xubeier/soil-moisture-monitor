@@ -44,6 +44,9 @@ Two iron nails are used as soil probes. They are inserted into the soil with a s
 This setup measures how well electricity passes through the soil. Wet soil conducts better than dry soil, so the voltage detected on P0 changes with moisture.
 
 ---
+## Program File
+[Download microbit-soil-moisture-sensor.hex](src/microbit-soil-moisture-sensor.hex)
+
 ## How It Works
 
 This project estimates soil moisture using the electrical conductivity method. Two iron nails are used as probes and inserted into the soil with a small gap between them. When the soil contains water, it also contains dissolved ions that allow electricity to pass through it. Wet soil therefore conducts electricity better than dry soil, which has higher resistance.
