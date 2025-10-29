@@ -63,18 +63,44 @@ The program continuously measures the moisture level from pin P0 and compares it
 5. Wait before the next measurement to save battery power
 
 The value from P0 is stored in a variable called `moisture`. A delay is added using `pause(7200000)` so the device checks the soil every 2 hours instead of constantly. This reduces battery use.
+![MakeCode Program](docs/WechatIMG263.jpeg)
 
-Start
-  ↓
-Read P0 moisture
-  ↓
-Is value ≤ 500?
-       ↙        ↘
-   Yes           No
- (Sad face)   (Happy face)
-  ↓              ↓
- Wait 2 hours → loop
+## Testing and Results
 
+The prototype was tested using two conditions: dry soil and wet soil. The moisture readings were displayed on the micro:bit during testing.
+
+| Test Condition | Moisture Reading (P0 value) | Result |
+|----------------|-----------------------------|--------|
+| Dry soil       | ~850                        | 😢 Dry |
+| Wet soil       | ~420                        | 😊 Wet |
+
+*Note: These values are approximate and will be updated after calibration testing.*
+
+## Power Saving Design
+
+A simple power-saving method was added to make the prototype more practical when running on batteries. Instead of measuring soil moisture continuously, the program waits between readings using a delay function. The micro:bit checks the soil once every 2 hours (`pause(7,200,000 ms)`). This reduces unnecessary energy use and helps the battery last longer.
+
+Without this delay, the micro:bit would read the sensor thousands of times per minute inside the forever loop, which would drain the battery quickly. In addition, the LED screen is cleared after each reading to minimise power consumption.
+
+
+## Limitations
+
+- The measurement is not highly accurate** because it uses simple iron nails instead of a calibrated soil moisture sensor.
+- The P0 + 3V method works but can cause electrolysis, which may slowly corrode the metal probes over time.
+- The readings can change depending on soil type, temperature, and minerals in the soil.
+- The system only gives a binary output (“dry” or “wet”) instead of showing an exact moisture percentage.
+- The probe distance and depth in the soil can affect the readings.
+
+These limitations are expected for a low-cost prototype, but the system still works well as a simple plant care reminder device.
+
+## Future Improvements
+
+- Calibration button: Add a button-based calibration so the threshold automatically adjusts to different soil types.
+- Better probe material: Replace iron nails with stainless steel or graphite electrodes to reduce corrosion.
+- Multiple sensor averaging: Use multiple readings and calculate an average to reduce noise in the data.
+- Low-power sleep mode: Fully implement deep sleep to extend battery life instead of using only delay-based sampling.
+- Automatic watering system: Add a relay module and water pump to turn this project into a self-watering system.
+- Data logging: Send moisture data to a computer or cloud for logging and monitoring.
 
 
 
