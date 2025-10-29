@@ -113,4 +113,6 @@ These limitations are expected for a low-cost prototype, but the system still wo
 - Data logging: Send moisture data to a computer or cloud for logging and monitoring.
 
 
+## References
+Full references are listed in CITATIONS.md.
 
