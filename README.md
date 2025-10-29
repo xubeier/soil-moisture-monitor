@@ -44,8 +44,6 @@ Two iron nails are used as soil probes. They are inserted into the soil with a s
 This setup measures how well electricity passes through the soil. Wet soil conducts better than dry soil, so the voltage detected on P0 changes with moisture.
 
 ---
-## Program File
-[Download microbit-soil-moisture-sensor.hex](src/microbit-soil-moisture-sensor.hex)
 
 ## How It Works
 
@@ -54,6 +52,15 @@ This project estimates soil moisture using the electrical conductivity method. T
 In this prototype, the 3V pin provides a small voltage** to the soil and pin P0 measures the voltage that returns through the soil. The moisture level is detected as an analog value between 0 and 1023. A lower reading means low conductivity (dry soil), while a higher reading indicates high conductivity (wet soil).
 
 The analog reading from pin `P0` ranges from **0 to 1023**. A threshold of **500** was chosen as an initial midpoint reference to separate dry and wet soil conditions during prototyping. This value can be adjusted later through calibration.
+
+## Program File (.hex)
+
+The compiled program for this project can be downloaded here:
+
+[Download microbit-soil-moisture-sensor.hex](src/microbit-soil-moisture-sensor.hex)
+
+Upload this file to a micro:bit using USB to run the project.
+
 
 ## Program Logic
 
