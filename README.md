@@ -80,9 +80,12 @@ The prototype was tested using two conditions: dry soil and wet soil. The moistu
 | Test Condition | Moisture Reading (P0 value) | Result |
 |----------------|-----------------------------|--------|
 | Dry soil       | ~1023                       | 😢 Dry |
-| Wet soil       | ~650。                       | 😊 Wet |
+| Wet soil       | ~650                        | 😊 Wet |
 
-
+ src/Experimental data.MP4
+ 
+  calculated the midpoint:(650 + 1023) / 2 = 836.5 (Since MakeCode uses whole numbers, I rounded this to 837)which is now used in the program as the decision point:
+	≤ 837 → soil is dry → sad face icon
 
 ## Power Saving Design
 
@@ -90,6 +93,7 @@ A simple power-saving method was added to make the prototype more practical when
 
 Without this delay, the micro:bit would read the sensor thousands of times per minute inside the forever loop, which would drain the battery quickly. In addition, the LED screen is cleared after each reading to minimise power consumption.
 
+src/Make a screenshot of the code.png
 
 ## Limitations
 
