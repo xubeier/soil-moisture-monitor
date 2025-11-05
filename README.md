@@ -49,15 +49,13 @@ This setup measures how well electricity passes through the soil. Wet soil condu
 
 This project estimates soil moisture using the electrical conductivity method. Two iron nails are used as probes and inserted into the soil with a small gap between them. When the soil contains water, it also contains dissolved ions that allow electricity to pass through it. Wet soil therefore conducts electricity better than dry soil, which has higher resistance.
 
-In this prototype, the 3V pin provides a small voltage** to the soil and pin P0 measures the voltage that returns through the soil. The moisture level is detected as an analog value between 0 and 1023. A lower reading means low conductivity (dry soil), while a higher reading indicates high conductivity (wet soil).
-
-The analog reading from pin `P0` ranges from **0 to 1023**. A threshold of **500** was chosen as an initial midpoint reference to separate dry and wet soil conditions during prototyping. This value can be adjusted later through calibration.
+The micro:bit sends a small voltage from the 3V pin through the soil, and the returning signal is read on pin P0 as an analog value between 0 and 1023.Lower readings indicate dry soil, and higher readings indicate wet soil.
 
 ## Program File (.hex)
 
 The compiled program for this project can be downloaded here:
 
-[Download microbit-soil-moisture-sensor.hex](src/microbit-soil-moisture-sensor.hex)
+src/microbit-soil-moisture-sensor(ok).hex
 
 Upload this file to a micro:bit using USB to run the project.
 
@@ -73,7 +71,7 @@ The program continuously measures the moisture level from pin P0 and compares it
 5. Wait before the next measurement to save battery power
 
 The value from P0 is stored in a variable called `moisture`. A delay is added using `pause(7200000)` so the device checks the soil every 2 hours instead of constantly. This reduces battery use.
-![MakeCode Program](docs/WechatIMG263.jpeg)
+
 
 ## Testing and Results
 
@@ -81,10 +79,10 @@ The prototype was tested using two conditions: dry soil and wet soil. The moistu
 
 | Test Condition | Moisture Reading (P0 value) | Result |
 |----------------|-----------------------------|--------|
-| Dry soil       | ~850                        | 😢 Dry |
-| Wet soil       | ~420                        | 😊 Wet |
+| Dry soil       | ~1023                       | 😢 Dry |
+| Wet soil       | ~650。                       | 😊 Wet |
 
-*Note: These values are approximate and will be updated after calibration testing.*
+
 
 ## Power Saving Design
 
