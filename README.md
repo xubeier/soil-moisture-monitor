@@ -62,8 +62,6 @@ Upload this file to a micro:bit using USB to run the project.
 
 ## Program Logic
 
-The micro:bit sends a small voltage from the 3V pin through the soil, and the returning signal is read on pin P0 as an analog value between 0 and 1023.
-
 The program continuously measures the moisture level from pin P0 and compares it to a threshold. The logic is:
 
 1. Read the moisture value using `analog read pin P0`
