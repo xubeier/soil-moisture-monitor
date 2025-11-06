@@ -1,9 +1,12 @@
 # References 
+
+Mazur, P., Gozdowski, D., & Wnuk, A. (2022). Relationships between Soil Electrical Conductivity and Sentinel-2-Derived NDVI with pH and Content of Selected Nutrients. Agronomy, 12(2), 354. https://doi.org/10.3390/agronomy12020354
+
 Microsoft. (n.d.). *Analog read pin*. MakeCode for micro:bit. https://makecode.microbit.org/reference/pins/analog-read-pin
 
-Little Bird Electronics. (n.d.). *Analog inputs & micro:bit*. Retrieved from https://learn.littlebirdelectronics.com.au/microbit/analog-inputs-and-micro-bit
+Little Bird Electronics. (n.d.). *Analog inputs & micro:bit*. https://learn.littlebirdelectronics.com.au/microbit/analog-inputs-and-micro-bit
 
-Keyestudio. (n.d.). *Micro:bit basic tutorial*. Retrieved from https://docs.keyestudio.com/projects/KS0802/en/latest/docs/Microbit/MicrobitBasicTutorial.htm
+Keyestudio. (n.d.). *Micro:bit basic tutorial*. https://docs.keyestudio.com/projects/KS0802/en/latest/docs/Microbit/MicrobitBasicTutorial.htm
 
 ST Biologicals. (2023). Understanding electrical conductivity in soil. Retrieved January 29, 2025, from https://stbiologicals.com/understanding-electrical-conductivity-in-soil/
 
